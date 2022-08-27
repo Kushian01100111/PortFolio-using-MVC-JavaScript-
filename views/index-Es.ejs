@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Comas - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <a href=""><span>PC.</span></a>
+            <ul>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <a href="/lightmode"><img src="" alt="Dark mode to ligth mode"></a>
+            <a href="/">Español->Ingles</a>
+        </nav>
+    </section>
+    <section>
+        <div>
+            <h1>Hola!, Soy Pedro Comas</h1>
+        </div>
+        <div>
+            <img src="" alt="img of me">
+        </div>
+        <div>
+            <h3>Un FullStack Engineer</h3>
+        </div>
+        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam iure ullam vitae repudiandae maxime aliquid amet omnis deleniti itaque dicta voluptatibus adipisci nobis, neque beatae ducimus dolorum veniam expedita. Modi.</p>
+        </div>
+        <div>
+            <a href=""><button>Hoja de vida</button></a>
+            <a href=""><img src="" alt=""></a>
+            <a href=""><img src="" alt=""></a>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <%  project.forEach(el =>{ %>
+            <div>
+                <h4><% el.name %></h4>
+                <img src="<% el.imgUrl %> " alt="project">
+                <p><% el.description %></p>
+                <span>
+                    <% el.technologys.forEach(tech =>{ %> 
+                    <span><% tech %></span> 
+                    <% }) %> 
+                </span>
+                <div>
+                    <a href="<% el.github %> "><img src="" alt=""></a>
+                    <a href=""><img src="<% el.live %> " alt=""></a>
+                </div>
+            </div>
+            <% }) %> 
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+            <div>
+                <% skills.forEach( el =>{ %>
+                    <span><% el.name %></span> 
+                    <% }) %> 
+            </div> 
+    </section>
+    <section id="contact">
+        <img src="" alt="github">
+        <img src="" alt="linkden">
+        <img src="" alt="angelist">
+        <a href=""><button>Enviame un email</button></a>
+    </section>
+    <footer> 
+        <span>creado por Pedro Comas</span>
+    </footer>
+</body>
+<script src="js/main.js"></script>
+</html>
